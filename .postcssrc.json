@@ -1,0 +1,14 @@
+{
+  "plugins": {
+    "autoprefixer": {},
+    "postcss-nested": {},
+    "postcss-pxtorem": {
+      "rootValue": 16,
+      "unitPrecision": 5,
+      "propList": ["*"],
+      "selectorBlackList": [],
+      "replace": true,
+      "minPixelValue": 0
+    }
+  }
+}

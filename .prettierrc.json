@@ -1,0 +1,26 @@
+{
+  "arrowParens": "avoid",
+  "importOrder": [
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    "^@/(.*)$",
+    "^../",
+    "^./"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "overrides": [{ "files": ".prettierrc", "options": { "parser": "json" } }],
+  "plugins": [
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-sort-json",
+    "prettier-plugin-packagejson",
+    "@trivago/prettier-plugin-sort-imports"
+  ],
+  "printWidth": 80,
+  "proseWrap": "never",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false
+}
