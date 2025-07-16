@@ -60,7 +60,7 @@ export default [
     },
   },
   // Ignore specific directories and files
-  { ignores: ['**/dist/', '**/public/', '**/client/', '.history', 'history'], },
+  { ignores: ['**/dist/', '**/public/', '**/client/', '.history', 'history', '**/mockServiceWorker.js'], },
   // Plugin configurations
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,

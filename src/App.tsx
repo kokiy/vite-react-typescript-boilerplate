@@ -1,12 +1,20 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import viteLogo from '/vite.svg'
 
+import { getV1Organizations } from '@/client/sdk.gen'
+
 import './App.css'
-import reactLogo from './assets/react.svg'
+import reactLogo from './asset/react.svg'
 
 function App() {
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    getV1Organizations().then(res => {
+      console.info(res)
+    })
+  }, [count])
 
   return (
     <>
