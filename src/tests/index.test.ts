@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { getV1Organizations } from '@/client/sdk.gen'
+import { getV1Organizations } from '@/services/sdk.gen'
 
 test('responds with the user', async () => {
   const response = await getV1Organizations()

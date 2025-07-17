@@ -22,7 +22,7 @@ A ready-to-use Vite project with best practices and essential integrations.
 
 2. Start development server: `npm run dev`
 
-3. Run tests: `npm test`
+3. Run tests: `npm run test:coverage`
 
 ---
 

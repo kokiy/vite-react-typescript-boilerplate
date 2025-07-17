@@ -9,7 +9,7 @@ import tseslint from 'typescript-eslint'
 export default [
   // Base configuration for all files
   {
-    files: ['{src,mocks}/**/*.{ts,tsx}'],
+    files: ['{src,mock}/**/*.{ts,tsx}'],
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
     },
@@ -65,7 +65,7 @@ export default [
     ignores: [
       '**/dist/',
       '**/public/',
-      '**/client/',
+      '**/services/',
       '.history',
       'history',
       '**/mockServiceWorker.js',

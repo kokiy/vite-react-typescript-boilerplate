@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 
 import { createRoot } from 'react-dom/client'
 
-import { start } from '../mocks/browser'
+import { start } from '../mock/browser'
 
 import App from './App.tsx'
 import './index.css'

@@ -38,7 +38,7 @@ export default defineConfig(({ mode }) => {
       setupFiles: ['./vitest.setup.ts'],
       coverage: {
         include: ['src/**/*.{ts,tsx}'],
-        exclude: ['src/client/**/*'],
+        exclude: ['src/services/**/*'],
         provider: 'istanbul',
         reporter: ['text', 'html', 'clover', 'lcov', 'json'],
         enabled: true,

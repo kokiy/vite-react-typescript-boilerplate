@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react'
 
 import viteLogo from '/vite.svg'
 
-import { getV1Organizations } from '@/client/sdk.gen'
+import RouterComponent from '@/router'
+import { getV1Organizations } from '@/services/sdk.gen'
 
 import './App.css'
-import reactLogo from './asset/react.svg'
+import reactLogo from './assets/react.svg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -38,6 +39,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <RouterComponent />
     </>
   )
 }
