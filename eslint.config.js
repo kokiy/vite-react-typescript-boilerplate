@@ -5,10 +5,11 @@ import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
+
 export default [
   // Base configuration for all files
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    files: ['{src,mocks}/**/*.{ts,tsx}'],
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
     },
@@ -42,13 +43,13 @@ export default [
   },
   // Vitest-specific configuration for test files
   {
-    files: ['**/*.test.{tsx,ts}'],
+    files: ['src/**/*.test.{tsx,ts}'],
     plugins: { vitest },
     rules: vitest.configs.recommended.rules,
   },
   // Accessibility configuration
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ['src/**/*.{ts,tsx}'],
     ...jsxA11y.flatConfigs.recommended,
     plugins: { 'jsx-a11y': jsxA11y },
     languageOptions: {
@@ -60,9 +61,19 @@ export default [
     },
   },
   // Ignore specific directories and files
-  { ignores: ['**/dist/', '**/public/', '**/client/', '.history', 'history', '**/mockServiceWorker.js'], },
+  {
+    ignores: [
+      '**/dist/',
+      '**/public/',
+      '**/client/',
+      '.history',
+      'history',
+      '**/mockServiceWorker.js',
+    ],
+  },
   // Plugin configurations
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  pluginReact.configs.flat['jsx-runtime'],]
+  pluginReact.configs.flat['jsx-runtime'],
+]
