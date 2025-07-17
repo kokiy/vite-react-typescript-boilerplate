@@ -1,11 +1,14 @@
 import { expect, test } from 'vitest'
 
-test('responds with the user', async () => {
-  const response = await fetch('https://api.example.com/user')
+import { getV1Organizations } from '@/client/sdk.gen'
 
-  await expect(response.json()).resolves.toEqual({
-    id: 'abc-123',
-    firstName: 'John',
-    lastName: 'Maverick',
+test('responds with the user', async () => {
+  const response = await getV1Organizations()
+
+  await expect(response.data?.filters).toEqual({
+    end_cursor: '3',
+    has_next_page: true,
+    has_previous_page: true,
+    start_cursor: '33',
   })
 })

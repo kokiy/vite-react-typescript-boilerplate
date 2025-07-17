@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig, loadEnv } from 'vite'
@@ -31,5 +32,16 @@ export default defineConfig(({ mode }) => {
       }),
     ],
     define: {},
+    test: {
+      testTimeout: 50000,
+      environment: 'jsdom',
+      setupFiles: ['./vitest.setup.ts'],
+      coverage: {
+        include: ['src/**/*.{ts,tsx}'],
+        provider: 'istanbul',
+        reporter: ['text', 'html', 'clover', 'lcov', 'json'],
+        enabled: true,
+      },
+    },
   }
 })
