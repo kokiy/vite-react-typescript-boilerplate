@@ -13,11 +13,36 @@
     "eslint-all": "eslint --fix --max-warnings=0 --no-warn-ignored",
     "lint": "eslint .",
     "openapi-ts": "openapi-ts",
+    "prepare": "husky",
     "prettier": "prettier --write src/**/*.{ts,tsx,less}",
     "preview": "vite preview",
     "start": "npm run dev",
-    "stylelint": "stylelint \"src/**/*.css\" --fix"
+    "stylelint": "stylelint \"src/**/*.css\" --fix",
+    "test": "vitest",
+    "test-ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
   },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run eslint",
+      "prettier --cache --write"
+    ],
+    "*.{ts,tsx}": [
+      "bash -c tsc",
+      "npm run eslint",
+      "prettier --cache --parser=typescript --write"
+    ],
+    "*.{css,less}": [
+      "npm run stylelint",
+      "prettier --cache --write"
+    ],
+    "*.{md,json}": [
+      "prettier --cache --write"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ],
   "dependencies": {
     "axios": "^1.10.0",
     "lodash-es": "^4.17.21",
