@@ -1,8 +1,8 @@
-import { storeSelector } from '@/store'
+import { storeSelector } from '@/store';
 
 const IndexComponent = () => {
-  const locale = storeSelector.use.locale()
-  const setLocale = storeSelector.use.setLocale()
+  const locale = storeSelector.use.locale();
+  const setLocale = storeSelector.use.setLocale();
   return (
     <div>
       <p>index page {locale}</p>
@@ -10,7 +10,7 @@ const IndexComponent = () => {
       <button onClick={() => setLocale('en-us')}>Switch Language</button>
       <button onClick={() => setLocale('zh-hk')}>切換語言</button>
     </div>
-  )
-}
+  );
+};
 
-export default IndexComponent
+export default IndexComponent;

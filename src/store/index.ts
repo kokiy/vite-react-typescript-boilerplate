@@ -1,19 +1,19 @@
-import { each } from 'lodash-es'
-import { create } from 'zustand'
-import { createJSONStorage, persist } from 'zustand/middleware'
+import { each } from 'lodash-es';
+import { create } from 'zustand';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
-import { createSelectors } from './create-selectors'
-import storeSlice from './index-slices'
-import type { GlobalState } from './index-type'
+import { createSelectors } from './create-selectors';
+import storeSlice from './index-slices';
+import type { GlobalState } from './index-type';
 
 export const useStore = create<GlobalState>()(
   persist(
     (...params) => {
-      let storeSliceMap = {} as GlobalState
+      let storeSliceMap = {} as GlobalState;
       each(Object.values(storeSlice), slice => {
-        storeSliceMap = { ...storeSliceMap, ...slice(...params) }
-      })
-      return storeSliceMap
+        storeSliceMap = { ...storeSliceMap, ...slice(...params) };
+      });
+      return storeSliceMap;
     },
     {
       name: 'kokiSessionStore',
@@ -23,6 +23,6 @@ export const useStore = create<GlobalState>()(
       version: 0,
     },
   ),
-)
+);
 
-export const storeSelector = createSelectors(useStore)
+export const storeSelector = createSelectors(useStore);

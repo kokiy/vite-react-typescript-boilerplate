@@ -1,4 +1,4 @@
-import type { IGlobalSlice } from './slices/global'
-import type { IUserSlice } from './slices/user'
+import type { IGlobalSlice } from './slices/global';
+import type { IUserSlice } from './slices/user';
 
-export type GlobalState = IGlobalSlice & IUserSlice
+export type GlobalState = IGlobalSlice & IUserSlice;

@@ -1,2 +1,2 @@
-const HomeComponent = () => <div>home page</div>
-export default HomeComponent
+const HomeComponent = () => <div>home page</div>;
+export default HomeComponent;
