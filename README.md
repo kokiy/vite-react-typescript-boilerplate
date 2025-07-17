@@ -16,6 +16,8 @@ A ready-to-use Vite project with best practices and essential integrations.
 
 - **State Management:** Uses [Zustand](https://zustand-demo.pmnd.rs/) for simple and scalable global state.
 
+**Routing:** Built with [React Router](https://reactrouter.com/) for flexible client-side navigation.
+
 - **Multi-Environment Deploy:** Supports multiple deployment environments.
 
 ## Getting Started
