@@ -14,6 +14,8 @@ A ready-to-use Vite project with best practices and essential integrations.
 
 - **CSS Processing:** Handled by [PostCSS](https://postcss.org/).
 
+- **State Management:** Uses [Zustand](https://zustand-demo.pmnd.rs/) for simple and scalable global state.
+
 - **Multi-Environment Deploy:** Supports multiple deployment environments.
 
 ## Getting Started
