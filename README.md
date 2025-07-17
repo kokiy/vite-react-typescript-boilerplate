@@ -1,15 +1,29 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Starter
 
-# outofbox to use
+A ready-to-use Vite project with best practices and essential integrations.
 
-## Integrate eslint ts-lint stylelint prettier husky lint-staged for Code Quality
+## Features
 
-## Intergate Vitest for Unit Test
+- **Code Quality:** Integrated ESLint, TypeScript, Stylelint, Prettier, Husky, and lint-staged.
 
-## Intergate msw for mock test data
+- **Unit Testing:** Powered by [Vitest](https://vitest.dev/).
 
-## Intergate @hey-api/openapi-ts for generate API code by OpenAPI
+- **API Mocking:** Uses [MSW](https://mswjs.io/docs/quick-start) for mock test data.
 
-## Intergate postcss for handle css
+- **OpenAPI Integration:** Generate API code via [@hey-api/openapi-ts](https://heyapi.dev/).
 
-## support multiple ENV for deploy
+- **CSS Processing:** Handled by [PostCSS](https://postcss.org/).
+
+- **Multi-Environment Deploy:** Supports multiple deployment environments.
+
+## Getting Started
+
+1. Install dependencies: `npm install`
+
+2. Start development server: `npm run dev`
+
+3. Run tests: `npm test`
+
+---
+
+Feel free to customize for your own workflow!
