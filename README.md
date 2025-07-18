@@ -6,7 +6,7 @@ A ready-to-use Vite project with best practices and essential integrations.
 
 - **⚛️ [React 19](https://react.dev/)** Functional components with hooks
 
-- 🧭 **[React Router v7](https://reactrouter.com/)** Modern routing with data APIs, nested routes.
+- **🧭 [React Router v7](https://reactrouter.com/)** Modern routing with data APIs, nested routes.
 
 - **🧠 [Zustand](https://zustand-demo.pmnd.rs/)** Lightweight global state management
 
