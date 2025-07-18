@@ -4,21 +4,29 @@ A ready-to-use Vite project with best practices and essential integrations.
 
 ## Features
 
-- **Code Quality:** Integrated ESLint, TypeScript, Stylelint, Prettier, Husky, and lint-staged.
+- **⚛️ [React 19](https://react.dev/)** Functional components with hooks
 
-- **Unit Testing:** Powered by [Vitest](https://vitest.dev/).
+- 🧭 **[React Router v7](https://reactrouter.com/)** Modern routing with data APIs, nested routes.
 
-- **API Mocking:** Uses [MSW](https://mswjs.io/docs/quick-start) for mock test data.
+- **🧠 [Zustand](https://zustand-demo.pmnd.rs/)** Lightweight global state management
 
-- **OpenAPI Integration:** Generate API code via [@hey-api/openapi-ts](https://heyapi.dev/).
+- **🧾 [@hey-api/openapi-ts](https://heyapi.dev/)** Generate TypeScript SDKs from OpenAPI specs
 
-- **CSS Processing:** Handled by [PostCSS](https://postcss.org/).
+- **🧰 [MSW](https://mswjs.io/docs/quick-start)** MSW (Mock Service Worker) – Mock API requests in development & tests
 
-- **State Management:** Uses [Zustand](https://zustand-demo.pmnd.rs/) for simple and scalable global state.
+- **🎛️ [PostCSS](https://postcss.org/)** integrates autoprefixer, postcss‑nested, and postcss‑px2rem
 
-- **Routing:** Built with [React Router](https://reactrouter.com/) for flexible client-side navigation.
+- **⚡️ [Vite](https://cn.vite.dev/)** Fast development & optimized production build
 
-- **Multi-Environment Deploy:** Supports multiple deployment environments.
+- **🧪 [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)** For unit testing
+
+- **🧹 ESLint + Prettier + StyleLint** Code linting & formatting
+
+- **🧱 Alias @ to src** Cleaner import paths
+
+- **🔒 Husky + lint-staged** Git hooks for quality checks
+
+- **🌍 dotenv support** Use .env for environment variables
 
 ## Getting Started
 
