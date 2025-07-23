@@ -20,13 +20,13 @@ A ready-to-use Vite project with best practices and essential integrations.
 
 - **🧪 [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)** For unit testing
 
-- **🧹 ESLint + Prettier + StyleLint** Code linting & formatting
+- **🧹 [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) + [StyleLint](https://stylelint.io/)** Code linting & formatting
 
 - **🧱 Alias @ to src** Cleaner import paths
 
 - **🔒 Husky + lint-staged** Git hooks for quality checks
 
-- **🌍 dotenv support** Use .env for environment variables
+- **🌍 [dotenv](https://dotenvx.com/)** Use .env for environment variables
 
 ## Getting Started
 
