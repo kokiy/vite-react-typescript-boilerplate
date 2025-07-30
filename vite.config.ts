@@ -23,10 +23,6 @@ export default defineConfig(({ mode }) => {
         typescript: {
           tsconfigPath: './tsconfig.app.json',
         },
-        eslint: {
-          useFlatConfig: true,
-          lintCommand: 'eslint',
-        },
         stylelint: {
           lintCommand: 'stylelint "src/**/*.css"',
         },

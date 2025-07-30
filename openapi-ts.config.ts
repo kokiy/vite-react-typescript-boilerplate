@@ -2,7 +2,7 @@ import { defineConfig } from '@hey-api/openapi-ts';
 
 export default defineConfig({
   input: 'https://api.heyapi.dev/v1/get/hey-api/backend',
-  output: { format: 'prettier', lint: 'eslint', path: 'src/services' },
+  output: { format: 'prettier', path: 'src/services' },
   plugins: [
     {
       name: '@hey-api/client-axios',

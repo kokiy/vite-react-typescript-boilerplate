@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "waderyan.gitblame",
+    "donjayamanne.githistory",
+    "github.copilot",
+    "github.copilot-chat",
+    "eamodio.gitlens",
+    "vscode-icons-team.vscode-icons",
+    "vitest.explorer",
+    "gruntfuggly.todo-tree",
+    "stylelint.vscode-stylelint",
+    "esbenp.prettier-vscode",
+    "oxc.oxc-vscode",
+    "ibm.output-colorizer",
+    "zhuangtongfa.material-theme"
+  ]
+}

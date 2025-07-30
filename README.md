@@ -20,7 +20,7 @@ A ready-to-use Vite project with best practices and essential integrations.
 
 - **🧪 [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)** For unit testing
 
-- **🧹 [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) + [StyleLint](https://stylelint.io/)** Code linting & formatting
+- **🧹 [Oxlint](https://oxc.rs/docs/guide/usage/linter/config.html) + [Prettier](https://prettier.io/) + [StyleLint](https://stylelint.io/)** Code linting & formatting
 
 - **🧱 Alias @ to src** Cleaner import paths
 

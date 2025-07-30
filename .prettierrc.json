@@ -12,7 +12,6 @@
   "overrides": [{ "files": ".prettierrc", "options": { "parser": "json" } }],
   "plugins": [
     "prettier-plugin-organize-imports",
-    "prettier-plugin-sort-json",
     "prettier-plugin-packagejson",
     "@trivago/prettier-plugin-sort-imports"
   ],
