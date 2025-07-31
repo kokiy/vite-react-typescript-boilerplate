@@ -1,21 +1,34 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react';
 
-import viteLogo from '/vite.svg'
+import viteLogo from '@/assets/vite.svg';
+import RouterComponent from '@/router';
+import { getV1Organizations } from '@/services/sdk.gen';
 
-import RouterComponent from '@/router'
-import { getV1Organizations } from '@/services/sdk.gen'
+import './app.css';
+import reactLogo from './assets/react.svg';
 
-import './App.css'
-import reactLogo from './assets/react.svg'
+let initialCount = 0;
+const oneStep = 1;
+
+let aa: number = 'sss';
+console.info(aa);
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(initialCount);
 
   useEffect(() => {
-    getV1Organizations().then(res => {
-      console.info(res)
-    })
-  }, [count])
+    console.info('');
+    getV1Organizations()
+      .then(res => {
+        console.info(res);
+      })
+      .catch(console.error);
+  }, [count]);
+
+  const handleBtnClick = useCallback(
+    () => setCount(count => count + oneStep),
+    [],
+  );
 
   return (
     <>
@@ -29,7 +42,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
+        <button type="button" onClick={handleBtnClick}>
           count is {count}
         </button>
         <p>
@@ -41,7 +54,7 @@ function App() {
       </p>
       <RouterComponent />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

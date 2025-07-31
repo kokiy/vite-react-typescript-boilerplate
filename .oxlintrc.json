@@ -10,20 +10,34 @@
     "restriction": "warn",
     "nursery": "warn"
   },
-  "env": { "builtin": true, "browser": true },
-  "globals": {},
+  "env": { "builtin": true, "browser": true, "node": true },
+  "globals": {
+    "test": "readonly",
+    "expect": "readonly"
+  },
   "rules": {
     "no-async-await": 0,
     "no-rest-spread-properties": 0,
     "no-console": [2, { "allow": ["warn", "error", "info"] }],
     "no-undefined": 0,
     "sort-imports": 0,
+    "sort-keys": 0,
+    "no-magic-numbers": ["error", { "ignoreArrayIndexes": true }],
+    "explicit-module-boundary-types": 0,
+    "func-style": [2, "declaration", { "allowArrowFunctions": true }],
     "import/prefer-default-export": 0,
     "import/no-default-export": 0,
     "typescript/explicit-function-return-type": 0,
     "promise/prefer-await-to-then": 0
   },
-  "ignorePatterns": ["dist", "public", "src/services", "vite.config.ts"],
+  "ignorePatterns": [
+    "dist",
+    "public",
+    "src/services",
+    "vite.config.ts",
+    "commitlint.config.js",
+    "**/*.d.ts"
+  ],
   "overrides": [
     { "files": ["**/*.test.{tsx,ts}"], "plugins": ["vitest"] },
     {

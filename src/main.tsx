@@ -1,17 +1,22 @@
-import { StrictMode } from 'react'
+import { StrictMode } from 'react';
 
-import { createRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client';
 
-import { start } from '../mock/browser'
+import { start } from '../mock/browser';
 
-import App from './App.tsx'
-import './index.css'
+import App from './app';
+import './index.css';
 
-start().then(() => {
-  console.info('Mock Service Worker started')
-  createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-      <App />
-    </StrictMode>,
-  )
-})
+start()
+  .then(() => {
+    console.info('Mock Service Worker started');
+    const rootElement = document.querySelector('#root');
+    if (rootElement) {
+      createRoot(rootElement).render(
+        <StrictMode>
+          <App />
+        </StrictMode>,
+      );
+    }
+  })
+  .catch(console.error);

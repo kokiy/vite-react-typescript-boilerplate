@@ -1,5 +1,3 @@
-const HelloComponent = () => {
-  return <div>Hello, World!</div>
-}
+const HelloComponent = () => <div>Hello, World!</div>;
 
-export default HelloComponent
+export default HelloComponent;

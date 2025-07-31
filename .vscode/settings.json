@@ -1,10 +1,12 @@
 {
   "css.validate": false,
   "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit",
     "source.fixAll.stylelint": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "less.validate": false,
-  "stylelint.validate": ["css", "less", "postcss"]
+  "stylelint.validate": ["css", "less", "postcss"],
+  "oxc.enable": true
 }

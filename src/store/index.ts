@@ -6,7 +6,7 @@ import { createSelectors } from './create-selectors';
 import storeSlice from './index-slices';
 import type { GlobalState } from './index-type';
 
-export const useStore = create<GlobalState>()(
+const useStore = create<GlobalState>()(
   persist(
     (...params) => {
       let storeSliceMap = {} as GlobalState;
@@ -25,4 +25,6 @@ export const useStore = create<GlobalState>()(
   ),
 );
 
-export const storeSelector = createSelectors(useStore);
+const storeSelector = createSelectors(useStore);
+
+export { storeSelector, useStore };

@@ -1,11 +1,10 @@
-import { setupWorker } from 'msw/browser'
+import { setupWorker } from 'msw/browser';
 
-import { handlers } from './handlers'
+import { handlers } from './handlers';
 
-const worker = setupWorker(...handlers)
-export const start = async () => {
-  return worker.start({
+const worker = setupWorker(...handlers);
+export const start = () =>
+  worker.start({
     onUnhandledRequest: 'bypass',
     serviceWorker: { url: '/mockServiceWorker.js' },
-  })
-}
+  });

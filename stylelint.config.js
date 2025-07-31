@@ -1,6 +1,6 @@
 /** @type {import('stylelint').Config} */
 
-export default {
+const stylelintConfig = {
   extends: ['stylelint-config-standard', 'stylelint-config-recess-order'],
   ignoreFiles: ['**/node_modules/**', '**/dist/**', 'public'],
   rules: {
@@ -8,3 +8,5 @@ export default {
     'color-no-invalid-hex': true,
   },
 };
+
+export default stylelintConfig;
