@@ -18,24 +18,8 @@
     "stylelint": "stylelint \"src/**/*.css\" --fix",
     "test": "vitest",
     "test-ui": "vitest --ui",
-    "test:coverage": "vitest run --coverage"
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "npm run oxlint",
-      "prettier --cache --write"
-    ],
-    "*.{ts,tsx}": [
-      "npm run oxlint",
-      "prettier --cache --parser=typescript --write"
-    ],
-    "*.{css,less}": [
-      "npm run stylelint",
-      "prettier --cache --write"
-    ],
-    "*.{md,json}": [
-      "prettier --cache --write"
-    ]
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc -p ./tsconfig.app.json"
   },
   "browserslist": [
     "defaults"
