@@ -10,9 +10,6 @@ import reactLogo from './assets/react.svg';
 let initialCount = 0;
 const oneStep = 1;
 
-let aa = 'sss';
-console.info(aa, 'aa');
-
 function App() {
   const [count, setCount] = useState(initialCount);
 
