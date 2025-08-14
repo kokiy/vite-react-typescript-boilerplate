@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from 'react';
 
 import viteLogo from '@/assets/vite.svg';
 import RouterComponent from '@/router';
-import { getV1Organizations } from '@/services/sdk.gen';
 
 import './app.css';
 import reactLogo from './assets/react.svg';
@@ -10,17 +9,42 @@ import reactLogo from './assets/react.svg';
 let initialCount = 0;
 const oneStep = 1;
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(initialCount);
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
-    console.info('');
-    getV1Organizations()
-      .then(res => {
-        console.info(res);
+    fetch('http://localhost:11434/api/generate', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'deepseek-r1:8b',
+        prompt: 'Why is the sky blue?',
+        stream: true,
+      }),
+    })
+      .then(async res => {
+        if (res.body) {
+          const reader = res.body.getReader();
+          const decoder = new TextDecoder('utf8');
+
+          while (true) {
+            // oxlint-disable-next-line no-await-in-loop
+            const { done, value } = await reader.read();
+            if (done) {
+              break;
+            }
+
+            const chunk = JSON.parse(decoder.decode(value));
+
+            setMessage(prev => prev + chunk.response);
+          }
+        }
       })
       .catch(console.error);
-  }, [count]);
+  }, []);
 
   const handleBtnClick = useCallback(
     () => setCount(count => count + oneStep),
@@ -49,9 +73,10 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <p className="message-wrap">{message}</p>
       <RouterComponent />
     </>
   );
-}
+};
 
 export default App;
