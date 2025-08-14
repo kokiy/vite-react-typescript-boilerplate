@@ -2,6 +2,7 @@
   "name": "vite-project",
   "version": "0.0.0",
   "private": true,
+  "license": "ISC",
   "type": "module",
   "scripts": {
     "build:env": "tsc -b && vite build --mode",
@@ -67,6 +68,7 @@
     "vite-plugin-checker": "^0.9.3",
     "vitest": "^3.2.4"
   },
+  "packageManager": "pnpm@10.14.0",
   "msw": {
     "workerDirectory": [
       "public"

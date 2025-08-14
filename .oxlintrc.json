@@ -22,9 +22,17 @@
     "no-undefined": 0,
     "sort-imports": 0,
     "sort-keys": 0,
-    "no-magic-numbers": ["error", { "ignoreArrayIndexes": true }],
+    "max-lines-per-function": [
+      2,
+      {
+        "max": 100,
+        "skipBlankLines": true,
+        "skipComments": true,
+        "IIFEs": false
+      }
+    ],
+    "no-magic-numbers": [2, { "ignoreArrayIndexes": true }],
     "explicit-module-boundary-types": 0,
-    "func-style": [2, "declaration", { "allowArrowFunctions": true }],
     "import/prefer-default-export": 0,
     "import/no-default-export": 0,
     "typescript/explicit-function-return-type": 0,
