@@ -14,14 +14,14 @@ const App = () => {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:11434/api/generate', {
+    fetch('/api/apex-ai/stream-chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         model: 'deepseek-r1:8b',
-        prompt: 'Why is the sky blue?',
+        message: 'Why is the sky blue?',
         stream: true,
       }),
     })
@@ -33,15 +33,17 @@ const App = () => {
           while (true) {
             // oxlint-disable-next-line no-await-in-loop
             const { done, value } = await reader.read();
+
             if (done) {
               break;
             }
 
-            const chunk = JSON.parse(decoder.decode(value));
+            const chunk = decoder.decode(value);
 
-            setMessage(prev => prev + chunk.response);
+            setMessage(prev => prev + chunk);
           }
         }
+        return;
       })
       .catch(console.error);
   }, []);

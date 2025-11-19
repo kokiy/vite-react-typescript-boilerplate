@@ -1,10 +1,5 @@
 import { Outlet } from 'react-router';
 
-const LayoutComponent = () => (
-  <div>
-    <p>layout</p>
-    <Outlet />
-  </div>
-);
+const LayoutComponent = () => <Outlet />;
 
 export default LayoutComponent;

@@ -16,6 +16,7 @@
     "expect": "readonly"
   },
   "rules": {
+    "no-debugger": 0,
     "no-async-await": 0,
     "no-rest-spread-properties": 0,
     "no-console": [2, { "allow": ["warn", "error", "info"] }],
