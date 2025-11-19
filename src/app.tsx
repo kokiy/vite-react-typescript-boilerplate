@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import viteLogo from '@/assets/vite.svg';
-import RouterComponent from '@/router';
 
 import './app.css';
 import reactLogo from './assets/react.svg';
+import { Hello } from './index';
 
 let initialCount = 0;
 const oneStep = 1;
@@ -55,6 +55,7 @@ const App = () => {
 
   return (
     <>
+      <Hello />
       <div>
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -76,7 +77,6 @@ const App = () => {
         Click on the Vite and React logos to learn more
       </p>
       <p className="message-wrap">{message}</p>
-      <RouterComponent />
     </>
   );
 };

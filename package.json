@@ -1,14 +1,25 @@
 {
-  "name": "vite-project",
+  "name": "vite-library",
   "version": "0.0.0",
-  "private": true,
   "license": "ISC",
+  "sideEffects": false,
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/components/index.js"
+    },
+    "./*": {
+      "import": "./dist/components/*.js"
+    }
+  },
+  "main": "dist/components/index.js",
+  "module": "dist/components/index.js",
+  "files": [
+    "dist",
+    "src/components"
+  ],
   "scripts": {
-    "build:env": "tsc -b && vite build --mode",
-    "build:prod": "npm run build:env prod",
-    "build:sit": "npm run build:env sit",
-    "build:uat": "npm run build:env uat",
+    "build": "tsc -b && vite build",
     "dev": "vite",
     "openapi-ts": "openapi-ts",
     "oxlint": "oxlint --fix",
@@ -25,18 +36,9 @@
   "browserslist": [
     "defaults"
   ],
-  "dependencies": {
-    "axios": "^1.10.0",
-    "lodash-es": "^4.17.21",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router": "^7.6.3",
-    "zustand": "^5.0.6"
-  },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@hey-api/openapi-ts": "^0.78.3",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.6.4",
     "@testing-library/react": "^16.3.0",
@@ -52,6 +54,7 @@
     "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "lint-staged": "^16.1.2",
+    "lodash-es": "^4.17.21",
     "msw": "^2.10.4",
     "oxlint": "^1.9.0",
     "postcss-nested": "^7.0.2",
@@ -60,13 +63,22 @@
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-packagejson": "^2.5.18",
     "prettier-plugin-sort-json": "^4.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "stylelint": "^16.21.1",
     "stylelint-config-recess-order": "^7.1.0",
     "stylelint-config-standard": "^38.0.0",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",
     "vite-plugin-checker": "^0.9.3",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "lodash-es": "^4.17.21",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "packageManager": "pnpm@10.14.0",
   "msw": {
