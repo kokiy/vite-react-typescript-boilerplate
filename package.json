@@ -2,7 +2,9 @@
   "name": "vite-library",
   "version": "0.0.0",
   "license": "ISC",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "type": "module",
   "exports": {
     ".": {
@@ -14,6 +16,7 @@
   },
   "main": "dist/components/index.js",
   "module": "dist/components/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist",
     "src/components"
@@ -36,6 +39,9 @@
   "browserslist": [
     "defaults"
   ],
+  "dependencies": {
+    "antd": "^6.0.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -65,7 +71,6 @@
     "prettier-plugin-sort-json": "^4.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "rollup-plugin-postcss": "^4.0.2",
     "stylelint": "^16.21.1",
     "stylelint-config-recess-order": "^7.1.0",
     "stylelint-config-standard": "^38.0.0",

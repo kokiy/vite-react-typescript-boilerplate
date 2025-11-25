@@ -1,10 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import viteLogo from '@/assets/vite.svg';
-
 import './app.css';
-import reactLogo from './assets/react.svg';
-import { Hello } from './index';
+import { Button } from './index';
 
 let initialCount = 0;
 const oneStep = 1;
@@ -55,15 +52,8 @@ const App = () => {
 
   return (
     <>
-      <Hello />
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+      <Button />
+      <div />
       <h1>Vite + React</h1>
       <div className="card">
         <button type="button" onClick={handleBtnClick}>

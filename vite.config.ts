@@ -1,7 +1,6 @@
 /// <reference types="vitest/config" />
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import postcss from 'rollup-plugin-postcss';
 import { defineConfig, loadEnv } from 'vite';
 import checker from 'vite-plugin-checker';
 import dts from 'vite-plugin-dts';
@@ -31,8 +30,6 @@ export default defineConfig(({ mode }) => {
         formats: ['es'],
       },
       cssCodeSplit: true,
-      sourcemap: false,
-      minify: false,
       rollupOptions: {
         external: [
           'react',
@@ -48,13 +45,6 @@ export default defineConfig(({ mode }) => {
           chunkFileNames: '[name].js',
           assetFileNames: '[name][extname]',
         },
-        plugins: [
-          postcss({
-            extract: true,
-            minimize: true,
-            modules: false,
-          }),
-        ],
       },
     },
     server: {
