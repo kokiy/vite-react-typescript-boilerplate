@@ -3,6 +3,7 @@ const stagedConfig = {
   '*.{ts,tsx}': [
     "sh -c 'tsc -p tsconfig.app.json'",
     'npm run oxlint',
+    'npm run stylelint',
     'prettier --cache --parser=typescript --write',
   ],
   '*.{css,less}': ['npm run stylelint', 'prettier --cache --write'],

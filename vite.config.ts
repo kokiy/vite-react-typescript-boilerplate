@@ -36,6 +36,8 @@ export default defineConfig(({ mode }) => {
           'react-dom',
           'react/jsx-runtime',
           'react-dom/client',
+          'lodash-es',
+          '@emotion/react',
         ],
         output: {
           preserveModules: true,

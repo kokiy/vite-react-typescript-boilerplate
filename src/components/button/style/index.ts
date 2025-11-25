@@ -9,5 +9,3 @@ export const buttonStyle = css`
   border-radius: 4px;
   cursor: pointer;
 `;
-
-export default buttonStyle;

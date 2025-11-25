@@ -1,7 +1,7 @@
 const stylelintConfig = {
   overrides: [
     {
-      files: ['**/*.{ts,tsx,js,jsx}'],
+      files: ['**/*.{ts,tsx}'],
       customSyntax: 'postcss-styled-syntax',
     },
   ],
