@@ -1,8 +1,7 @@
+// /** @jsxImportSource @emotion/react */
 import React from 'react';
 
-import './button.module.css';
-// side-effect
-import styles from './button.module.css';
+import { buttonStyle } from './style';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,10 +11,9 @@ export interface ButtonProps
 export const Button: React.FC<ButtonProps> = ({
   label = 'Button',
   ...props
-}) => {
-  return (
-    <button className={styles.btn} {...props}>
-      {label}
-    </button>
-  );
-};
+}) => (
+  <button type="button" css={buttonStyle} {...props}>
+    {label}
+    <span className="aaaa">ddd</span>
+  </button>
+);

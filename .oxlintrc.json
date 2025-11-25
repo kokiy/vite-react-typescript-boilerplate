@@ -35,6 +35,7 @@
     "no-magic-numbers": [2, { "ignoreArrayIndexes": true }],
     "explicit-module-boundary-types": 0,
     "import/prefer-default-export": 0,
+    "import/no-named-export": 0,
     "import/no-default-export": 0,
     "typescript/explicit-function-return-type": 0,
     "promise/prefer-await-to-then": 0
@@ -54,6 +55,12 @@
       "plugins": ["react", "react-perf", "jsx-a11y"],
       "rules": {
         "react/react-in-jsx-scope": 0,
+        "react/no-unknown-property": [
+          2,
+          {
+            "ignore": ["css"]
+          }
+        ],
         "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
         "import/no-unassigned-import": [2, { "allow": ["**/*.css"] }]
       }

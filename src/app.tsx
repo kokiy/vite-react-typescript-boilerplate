@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import './app.css';
 import { Button } from './index';
 
 let initialCount = 0;

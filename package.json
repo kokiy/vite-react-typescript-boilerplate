@@ -2,9 +2,6 @@
   "name": "vite-library",
   "version": "0.0.0",
   "license": "ISC",
-  "sideEffects": [
-    "**/*.css"
-  ],
   "type": "module",
   "exports": {
     ".": {
@@ -30,7 +27,7 @@
     "prettier": "prettier --write src/**/*.{ts,tsx,css}",
     "preview": "vite preview",
     "start": "npm run dev",
-    "stylelint": "stylelint \"src/**/*.css\" --fix",
+    "stylelint": "stylelint \"src/**/*.{ts,tsx}\" --fix",
     "test": "vitest",
     "test-ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
@@ -40,6 +37,7 @@
     "defaults"
   ],
   "dependencies": {
+    "@emotion/react": "^11.14.0",
     "antd": "^6.0.0"
   },
   "devDependencies": {
@@ -63,17 +61,15 @@
     "lodash-es": "^4.17.21",
     "msw": "^2.10.4",
     "oxlint": "^1.9.0",
-    "postcss-nested": "^7.0.2",
-    "postcss-pxtorem": "^6.1.0",
+    "postcss-styled-syntax": "^0.7.1",
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-packagejson": "^2.5.18",
     "prettier-plugin-sort-json": "^4.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "stylelint": "^16.21.1",
-    "stylelint-config-recess-order": "^7.1.0",
-    "stylelint-config-standard": "^38.0.0",
+    "stylelint": "^16.26.0",
+    "stylelint-config-standard": "^39.0.1",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",
     "vite-plugin-checker": "^0.9.3",

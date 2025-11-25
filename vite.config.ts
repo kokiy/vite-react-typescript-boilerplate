@@ -65,7 +65,7 @@ export default defineConfig(({ mode }) => {
           tsconfigPath: './tsconfig.app.json',
         },
         stylelint: {
-          lintCommand: 'stylelint "src/**/*.css"',
+          lintCommand: 'stylelint \"src/**/*.{ts,tsx}\" --fix',
         },
       }),
 
