@@ -19,12 +19,24 @@ const useStore = create<GlobalState>()(
       name: 'kokiSessionStore',
       storage: createJSONStorage(() => sessionStorage),
       //  skipHydration: true,
-      partialize: state => ({ locale: state.locale }),
+      partialize: state => ({
+        locale: state.locale,
+        // 持久化认证相关状态
+        token: state.token,
+        userInfo: state.userInfo,
+        isAuthenticated: state.isAuthenticated,
+        // 持久化权限
+        permissions: state.permissions,
+      }),
       version: 0,
     },
   ),
 );
 
-const storeSelector = createSelectors(useStore);
+const storeSelector = createSelectors(useStore) as typeof useStore & {
+  use: {
+    [K in keyof GlobalState]: () => GlobalState[K];
+  };
+};
 
 export { storeSelector, useStore };

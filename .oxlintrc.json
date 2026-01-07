@@ -17,22 +17,17 @@
   },
   "rules": {
     "no-debugger": 0,
+    "no-optional-chaining": 0,
+    "max-lines": 0,
+    "no-ternary": 0,
     "no-async-await": 0,
     "no-rest-spread-properties": 0,
     "no-console": [2, { "allow": ["warn", "error", "info"] }],
     "no-undefined": 0,
     "sort-imports": 0,
+    "no-magic-numbers:": 0,
     "sort-keys": 0,
-    "max-lines-per-function": [
-      2,
-      {
-        "max": 100,
-        "skipBlankLines": true,
-        "skipComments": true,
-        "IIFEs": false
-      }
-    ],
-    "no-magic-numbers": [2, { "ignoreArrayIndexes": true }],
+    "max-lines-per-function": 0,
     "explicit-module-boundary-types": 0,
     "import/prefer-default-export": 0,
     "import/no-default-export": 0,

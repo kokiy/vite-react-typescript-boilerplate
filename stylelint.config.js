@@ -6,6 +6,10 @@ const stylelintConfig = {
   rules: {
     'at-rule-no-unknown': undefined,
     'color-no-invalid-hex': true,
+    'selector-pseudo-class-no-unknown': [
+      true,
+      { ignorePseudoClasses: ['global'] },
+    ],
   },
 };
 

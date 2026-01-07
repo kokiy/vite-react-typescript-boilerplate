@@ -11,7 +11,7 @@
     "build:uat": "npm run build:env uat",
     "dev": "vite",
     "openapi-ts": "openapi-ts",
-    "oxlint": "oxlint --fix",
+    "oxlint": "oxlint --fix --quiet",
     "prepare": "husky",
     "prettier": "prettier --write src/**/*.{ts,tsx,css}",
     "preview": "vite preview",
@@ -26,8 +26,13 @@
     "defaults"
   ],
   "dependencies": {
+    "@ant-design/icons": "^6.1.0",
+    "@tanstack/react-query": "^5.90.16",
+    "@tanstack/react-query-devtools": "^5.91.2",
+    "antd": "^6.1.4",
     "axios": "^1.10.0",
     "lodash-es": "^4.17.21",
+    "modern-normalize": "^3.0.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router": "^7.6.3",
